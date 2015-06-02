@@ -1,0 +1,30 @@
+<div class="meetings cf">
+	<h1>Add Meeting</h1>
+	<form class="formgroup addmeeting cf" name="myform" novalidate
+		ng-submit="addMeeting()">
+		<div class="inputwrapper">
+			<input type="text" name="meetingname" placeholder="Meeting name"
+				ng-model="meetingname" ng-required="true">
+		</div>
+		<button type="submit" class="btn"
+			ng-disabled="myform.$invalid">+</button>
+	</form>
+	<h2>Your meetings</h2>
+	<div class="meeting" ng-repeat="(key, meeting) in meetings">
+		<button class="btn btn-delete tooltip"
+			ng-click="deleteMeeting(key)">
+			<span>Delete this meeting</span>
+		</button>
+		
+    <a class="btn btn-list tooltip" 
+      ng-href="#/checkins/{{currentUser.regUser}}/{{key}}/checkinsList">
+      <span>View list of checked in users</span></a>
+			
+		<a class="btn btn-checkin tooltip" 
+			ng-href="#/checkins/{{currentUser.regUser}}/{{key}}">
+			<span>Go to check-in URL</span>
+		</a>
+		
+		<span>{{meeting.name}}</span>
+	</div><!-- Meeting list -->
+</div><!-- Meetings cf -->

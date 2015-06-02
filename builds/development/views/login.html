@@ -1,0 +1,30 @@
+<section class="login">
+	<form name="myform" 
+		ng-submit="login()" novalidate>
+		<h1>Not Russian hacking site by {{ name }}</h1>
+		
+		<p class="error formerror" ng-show="message">{{message}}</p>
+		
+		<p>Please enter informations</p>
+		
+		<input type="email" name="email" placeholder="Most vulnerable email"
+			ng-model="user.email" ng-required="true">
+		<p class="error validationerror" 
+			ng-show="myform.email.$invalid && myform.email.$touched">
+			Must be a valid email.
+		</p>
+		
+		
+		<input type="password" name="password" placeholder="Passwords"
+			ng-model="user.password" ng-required="true">
+		<p class="error validationerror" 
+			ng-show="myform.password.$invalid && myform.password.$touched">
+			Must be a valid password.
+		</p>
+			
+		<button type="submit" class="btn"
+			ng-disabled="myform.$invalid">Login</button>
+		
+		<p>or <a href="#/register">register</a></p>
+	</form>
+</section>
