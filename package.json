@@ -1,12 +1,12 @@
 {
   "name": "AngularData",
-  "version": "0.0.1",
-  "description": "An application for taking attendance at meetups. Part of my Data Driven Web Applications with Angular.js course at Lynda.com",
+  "version": "1.0.0",
+  "description": "An application for taking attendance at meetups. Part of my Data Driven Web Applications with Angular.js and Firebase",
   "repository": {
     "type": "git",
-    "url": "https://github.com/planetoftheweb/angulardata.git"
+    "url": ""
   },
-  "author": "Ray Villalobos",
+  "author": "Steven Bayer",
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-util": "^2.2.20",

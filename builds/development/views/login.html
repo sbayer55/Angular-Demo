@@ -1,13 +1,13 @@
 <section class="login">
 	<form name="myform" 
 		ng-submit="login()" novalidate>
-		<h1>Not Russian hacking site by {{ name }}</h1>
+		<h1>Meeting Checkins {{ name }}</h1>
 		
 		<p class="error formerror" ng-show="message">{{message}}</p>
 		
 		<p>Please enter informations</p>
 		
-		<input type="email" name="email" placeholder="Most vulnerable email"
+		<input type="email" name="email" placeholder="Email Address"
 			ng-model="user.email" ng-required="true">
 		<p class="error validationerror" 
 			ng-show="myform.email.$invalid && myform.email.$touched">
